@@ -1,0 +1,325 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.logo img{
+    height: 100px;
+    width:300px;
+}
+
+.buttons{
+    width:700px;
+    height: 50px;
+    margin: auto;
+    padding: 2%;
+    text-align: center
+}
+
+.buttons .login{
+    border: 2px solid black;
+    color: black;
+    padding: 1%;
+    margin-right: 10px;
+    font-size:35px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.login:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+.buttons .register{
+    border: 2px solid black;
+    color: black;
+    padding: 1%;
+    margin-left: 10px;
+    font-size:35px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.register:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+.slide-container{
+    width: 600px;
+    height:400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image-container{
+    width: 2400px;
+    height: 400px;
+    position: relative;
+    transition: left 2s;
+    -webkit-transition: left 2s;
+}
+
+.slider-image{
+    width:600px;
+    height:400px;
+    float:left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.button-container{
+    top: -20px;
+    position:relative;
+}
+
+.slider-button{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color:white;
+}
+
+#slider-image-1:target ~ .image-container{
+    left: 0px;
+}
+
+#slider-image-2:target ~ .image-container{
+    left:-600px;
+}
+
+#slider-image-3:target ~ .image-container{
+    left:-1200px;
+}
+
+#slider-image-4:target ~ .image-container{
+    left:-1800px;
+}
+
+.sign-up-form{
+    max-width: 600px;
+    width: 100%;
+    margin: 10% auto 15%;
+    padding: 1%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.sign-up-form .title{
+    font-size: 35px;
+    font-weight:bold;
+    padding: 1%;
+    position: relative;
+}
+
+.sign-up-form form .details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:10px 0 10px 0;
+    height:300px;
+}
+
+.sign-up-form form .details .input{
+    margin-bottom: 15px;
+    width:50%;
+}
+
+.sign-up-form form .details .input .details-input{
+    display: block;
+    font-weight: 500;
+}
+
+.sign-up-form form .details .input input{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+    width:90%;
+    margin: 10px auto 0;
+}
+
+.sign-up-form form .register-button{
+    height:40px;
+    margin:20px 0;
+}
+
+.sign-up-form form .register-button input{
+    height: 100%;
+    width: 50%;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.sign-up-form form .register-button input:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+.sign-in-page{
+    max-width: 600px;
+    width: 100%;
+}
+
+.sign-in-page img{
+    height: 100px;
+}
+
+.sign-in-page h1{
+    width:100%;
+    margin: auto 450px; 
+    text-align: center;
+    font-size: 25px;
+}
+
+.sign-in-form{
+    max-width: 550px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background: lightblue;
+    border-radius: 20px;
+}
+
+.sign-in-form form .details{
+    display: contents;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+    height:300px;
+}
+
+.sign-in-form form .details .input{
+    margin-bottom: 15px;
+    margin-left: 15px;;
+    width:100%;
+}
+
+.sign-in-form form .details .input input{
+    height: 40px;
+    width:100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+    width:90%;
+    margin: 10px auto 0;
+}
+
+.sign-in-form form .sign-in-button{
+    height:20px;
+    margin:20px 0;
+    text-align: center;
+}
+
+.sign-in-form form .sign-in-button input{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.sign-in-form form .sign-in-button input:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+.reset-register{
+    max-width: 584px;
+    width: 100%;
+    margin: -30px auto;    
+    text-align: center;
+}
+
+.reset-register a{
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 20px;
+    margin:50px;
+    color:black;
+}
+
+.reset-register a:hover{
+    color: orange;
+    transition:0.3s ease;
+}
+
+@media (max-width: 584px){
+    .logo img{
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .buttons{
+        margin-left: 35px;
+        margin-bottom: 10px;
+        width:100%;
+    }
+    
+    .slider-image{
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .sign-up-form{
+        margin:0;
+        max-width: 100%;
+    }
+
+    .sign-up-form form .details .input{
+        margin-bottom: 15px;
+        width:100%;
+    }
+
+    .sign-up-form form .details{
+        max-height: 500px;
+        overflow-y: scroll;
+        height: 100%;
+    }
+
+    .sign-in-page{
+        margin:0;
+        max-width: 100%;
+    }
+
+    .sign-in-page h1{
+        margin:0;
+        max-width: 100%;
+    }
+
+    .sign-in-page{
+        margin:0;
+        max-width: 100%;
+    }
+
+    .sign-in-form{
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .sign-in-form form .details .input{
+        margin:0;
+        max-width:100%;
+    }
+
+    .reset-register a{
+        margin: 0;
+        margin-left: 30px;
+        display: block;
+        width: 100%;
+    }
+}
