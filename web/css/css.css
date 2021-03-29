@@ -3,10 +3,9 @@ body{
     padding: 0;
 }
 
-.logo img{
-    height: 100px;
-    width:300px;
-}
+/*
+index page
+*/
 
 .buttons{
     width:700px;
@@ -101,6 +100,9 @@ body{
     left:-1800px;
 }
 
+/*
+sign-up page
+*/
 .sign-up-form{
     max-width: 600px;
     width: 100%;
@@ -168,13 +170,17 @@ body{
 	color:#fff;
 }
 
+/*
+sign-in page
+*/
 .sign-in-page{
-    max-width: 600px;
+    max-width: 100%px;
     width: 100%;
 }
 
 .sign-in-page img{
-    height: 100px;
+     height: 100px;
+     width:300px;
 }
 
 .sign-in-page h1{
@@ -258,22 +264,883 @@ body{
     transition:0.3s ease;
 }
 
+/*
+reset-password page
+*/
+.reset-password-container{
+    width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: lightblue;
+    border-radius: 20px;
+    position: relative;
+    text-align: center;   
+}
+
+.reset-password-container input{
+    width:50%;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.reset-password-container button{
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.reset-password-container button:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+
+/*
+homepage
+*/
+.user-icon{
+    float: right;
+    overflow: hidden;
+}
+
+.user-icon .dropbtn {  
+    border: none;
+    outline: none;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.user-icon .dropbtn img{
+    width: 50px;
+    height: 50px;
+}
+
+.dropdown-content {
+    display: none;
+    position:absolute;
+    background-color: red;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float:none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+  .user-icon:hover .dropdown-content {
+    display: block;
+}
+
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    margin-top: 10px;
+}
+
+.navbar a:hover{
+    background-color: red;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.data-analyse-box{
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    margin:10px 20px;
+    background: lightblue;
+    border-radius: 20px;
+    float: left;
+}
+
+.data-analyse-box .data-box{
+    width: 350px;
+    height: 200px;
+    padding: 20px;
+    background: white;
+    margin-top: -90px;
+    border-radius: 20px;
+}
+
+.data-analyse-box button{
+    float:none;
+    color: black;
+    display: block;
+    text-align: center;
+    position:relative;
+    margin-left: 420px;
+    margin-top: 30px;
+}
+
+.personal-status-box{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    margin:10px 10px;
+    background: lightblue;
+    border-radius: 20px;
+    padding-left : 20px; 
+    float:left;
+}
+
+.personal-status-box .data-box{
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    background: white;
+    margin-top: -90px;
+    border-radius: 20px;
+}
+
+.personal-status-box button{
+    float:none;
+    color: black;
+    display: block;
+    text-align: center;
+    position:relative;
+    margin-left: 320px;
+    margin-top: 30px;
+}
+
+.hydrogen-box{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    margin:10px 15px;
+    background: lightblue;
+    border-radius: 20px;
+    padding-left: 20px;
+    float:left;
+}
+
+.hydrogen-box .data-box{
+    width: 250px;
+    height: 200px;
+    padding: 20px;
+    background: white;
+    margin-top: -90px;
+    border-radius: 20px;
+}
+
+.hydrogen-box button{
+    float:none;
+    color: black;
+    display: block;
+    text-align: center;
+    margin-left: 320px;
+    margin-top: 30px;
+}
+
+.extra-box{
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    margin:10px 20px;
+    background: lightblue;
+    border-radius: 20px;
+    float: left;
+}
+
+.extra-box .calories-burnt-box{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    align-items: ce;
+}
+
+.extra-box .calories-burnt-box p1{
+    font-size: 12px;
+    float: right;
+}
+
+.extra-box .activity-box{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    margin-top:20px;
+    border-radius: 50%; 
+    text-align: center;
+}
+
+.extra-box .activity-box button{
+    width: 80px;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding:5px 0;
+}
+
+.extra-box .activity-box button:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+.content-box{
+    width: 850px;
+    height: 300px;
+    padding: 20px;
+    margin:10px 18px;
+    background: lightblue;
+    border-radius: 20px;
+    padding-left : 20px; 
+    float:left;
+}
+
+/*
+water page
+*/
+.water-info-box{
+    max-width: 550px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background: lightblue;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.water-info-box .water-goal-box{
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    margin-top:20px;
+    border-radius: 50%; 
+    text-align: center;
+}
+
+.water-goal-box p{
+    margin-top: 5px;
+}
+
+.add-water-box{
+    text-align: center;
+}
+
+.add-water-box .add-water{
+    display: inline-flex;
+}
+
+.add-water p{
+    margin-right:20px;
+}
+
+.add-water select{
+    font-size: 16px;
+    margin:auto;
+}
+
+.goal-water-box{
+    text-align: center;;
+}
+
+.goal-water-box .goal-water{
+    display: inline-flex;
+}
+
+.goal-water p{
+    margin-right:20px;
+}
+
+.goal-water input{
+    width:65px;
+    margin:auto;
+}
+
+/*
+weight page
+*/
+.weight-info-box{
+    max-width: 550px;
+    width: 100%;
+    height:300px;
+    margin: 30px auto;
+    padding: 20px;
+    background: lightblue;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+.weight-info-box .weight-goal-box{
+    width: 250px;
+    height: 250px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background: white;
+    border-radius: 50%;
+    margin-top: -10px;
+    font-size: 15px;
+}
+
+
+.weight-goal-box input{
+    width: 100px;
+    margin: -10px;
+}
+
+.current-weight-box{
+    text-align: center;
+}
+
+.current-weight-box .current-weight{
+    display: inline-flex;
+}
+
+.current-weight p{
+    margin-right:20px;
+}
+
+.current-weight input{
+    width:65px;
+    margin:auto;
+}
+
+.current-weight-box .goal-weight-box{
+    display: inline-flex;
+}
+
+.goal-weight-box p{
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.goal-weight-box input{
+    width:65px;
+    margin:auto;
+}
+
+
+.current-weight-box .weight-update-button{
+    height:20px;
+    margin:20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.current-weight-box .weight-update-button input{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.current-weight-box .weight-update-button input:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+activity page
+*/
+.activity-container{
+    max-width: 600px;
+    width: 100%;
+    margin: 4% auto 15%;
+    padding: 1%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.activity-container p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.activity-container .activity-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin:10px 0 10px 0;
+    height:300px;
+}
+
+.activity-container .activity-details .activities{
+    margin-bottom: 5px;
+    width:50%;
+}
+
+.activity-container .activity-details .activities a{
+    display: block;
+    font-weight: 500;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+    font-size: 20px;
+    width:90%;
+    margin: 15px auto 0;
+    color: black;
+    text-decoration: none;
+}
+
+.activity-container .activity-details .activities a:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+yoga page
+*/
+.yoga-container{
+    max-width: 600px;
+    width: 100%;
+    margin: 1% auto 15%;
+    padding: 2%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.yoga-container p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top:0;
+}
+
+.yoga-container .yoga-image-container{
+    width: 600px;
+    height: 350px;
+    position: relative;
+}
+
+.yoga-image-container img{
+    width:600px;
+    height:350px;
+}
+
+.yoga-duration-container{
+    margin-top: -220px;
+    text-align: center;
+    display: block;
+}
+
+.yoga-duration-container .yoga-duration{
+    display: inline-flex;
+}
+
+.yoga-duration-container p{
+    margin-right:20px;
+}
+
+.yoga-duration-container input{
+    width:65px;
+    margin:auto;
+}
+
+.yoga-duration-container .submit-button{
+    height:20px;
+    margin:20px 0;
+    text-align: center;
+
+}
+
+.yoga-duration-container .submit-button input{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.yoga-duration-container .submit-button input:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+zumba page
+*/
+.zumba-container{
+    max-width: 600px;
+    width: 100%;
+    margin: 1% auto 15%;
+    padding: 2%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.zumba-container p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top:0;
+}
+
+.zumba-container .zumba-image-container{
+    width: 600px;
+    height: 350px;
+    position: relative;
+}
+
+.zumba-image-container img{
+    width:600px;
+    height:350px;
+}
+
+.zumba-duration-container{
+    margin-top: -220px;
+    text-align: center;
+    display: block;
+}
+
+.zumba-duration-container .zumba-duration{
+    display: inline-flex;
+}
+
+.zumba-duration-container p{
+    margin-right:20px;
+}
+
+.zumba-duration-container input{
+    width:65px;
+    margin:auto;
+}
+
+.zumba-duration-container .submit-button{
+    height:20px;
+    margin:20px 0;
+    text-align: center;
+
+}
+
+.zumba-duration-container .submit-button input{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.zumba-duration-container .submit-button input:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+cardio page
+*/
+.cardio-container{
+    max-width: 600px;
+    width: 100%;
+    margin: 1% auto 15%;
+    padding: 2%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.cardio-container p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top:0;
+}
+
+.cardio-container .cardio-image-container{
+    width: 600px;
+    height: 350px;
+    position: relative;
+}
+
+.cardio-image-container img{
+    width:600px;
+    height:350px;
+}
+
+.cardio-duration-container{
+    margin-top: -220px;
+    text-align: center;
+    display: block;
+}
+
+.cardio-duration-container .cardio-duration{
+    display: inline-flex;
+}
+
+.cardio-duration-container p{
+    margin-right:20px;
+}
+
+.cardio-duration-container input{
+    width:65px;
+    margin:auto;
+}
+
+.cardio-duration-container .submit-button{
+    height:20px;
+    margin:20px 0;
+    text-align: center;
+}
+
+.cardio-duration-container .submit-button input{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+}
+
+.cardio-duration-container .submit-button input:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+Running page
+*/
+.running-container{
+    max-width: 600px;
+    width: 100%;
+    height: 350px;
+    margin: 1% auto 15%;
+    padding: 2%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.running-button-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin-top: -200px;  
+}
+
+
+.running-button-container button{
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px 20px;
+    display: inline-flex;
+    margin-left:  200px;
+    margin-right: 200px;
+}
+
+.running-button-container button:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+cycling page
+*/
+.cycling-container{
+    max-width: 600px;
+    width: 100%;
+    height: 350px;
+    margin: 1% auto 15%;
+    padding: 2%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.cycling-button-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin-top: -200px;  
+}
+
+
+.cycling-button-container button{
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px 20px;
+    display: inline-flex;
+    margin-left:  200px;
+    margin-right: 200px;
+}
+
+.cycling-button-container button:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+walking page
+*/
+.walking-container{
+    max-width: 600px;
+    width: 100%;
+    height: 350px;
+    margin: 1% auto 15%;
+    padding: 2%;
+    background: lightblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.walking-button-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin-top: -200px;  
+}
+
+
+.walking-button-container button{
+    font-size: 20px;
+    border-radius: 5px;
+    padding-left: 10px 20px;
+    display: inline-flex;
+    margin-left:  200px;
+    margin-right: 200px;
+}
+
+.walking-button-container button:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
+/*
+profile page
+*/
+.profile-container{
+    max-width: 800px;
+    width: 100%;
+    height: 500px;
+    margin: 5px auto ;
+    padding: 1%;
+    background: lightblue;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.profile-container p{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile-container .input{
+    display: block;
+    margin-left: 30px;
+}
+
+
+.profile-container .input{
+    margin-bottom: 15px;
+    width:50%;
+}
+
+.profile-container .input .details-input{
+    display: block;
+}
+
+.profile-container .input input{
+    height: 40px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 90%;
+    margin: 10px 0 10px 0;
+}
+
+
+.profile-container .profile-image img{
+    width:400px;
+    height:400px;
+    float:right;
+    margin-top: -400px;
+    margin-right: -10px;
+}
+
+.profile-button-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin:30px 0; 
+}
+
+
+.profile-button-container button{
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.profile-button-container button:hover{
+    background-color:#000;
+	transition:0.6s ease;
+	color:#fff;
+}
+
 @media (max-width: 584px){
-    .logo img{
+    .sign-in-page img{
         margin: 0;
         max-width: 100%;
-    }
+   }
 
     .buttons{
         margin-left: 35px;
         margin-bottom: 10px;
         width:100%;
     }
-    
-    .slider-image{
-        margin: 0;
-        max-width: 100%;
+
+    .slide-container{
+        margin-left:30px;
+        width: 100%;
     }
+
+    .slider-image{
+        max-width: 600px;
+        width: 100%;
+    }
+
 
     .sign-up-form{
         margin:0;
@@ -322,4 +1189,13 @@ body{
         display: block;
         width: 100%;
     }
+
+    .reset-password-container{
+        margin:0;
+        max-width: 100%;
+    }
+
+    .reset-password-container input{
+        margin: 0;
+        max-width: 100%;
 }
