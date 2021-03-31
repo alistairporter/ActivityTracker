@@ -12,29 +12,29 @@
 
 <body>
     <div class="sign-in-page">
-        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
     </div>
 
 	<div class="activity-container">
         <p>Start Activity</p>
         <div class="activity-details">
             <div class="activities">
-                <a href="walking.html">Walking</a>
+                <a href="walking.php">Walking</a>
             </div>
             <div class="activities">
-                <a href="cycling.html">Cycling</a>
+                <a href="cycling.php">Cycling</a>
             </div>
             <div class="activities">
-                <a href="running.html">Running</a>
+                <a href="running.php">Running</a>
             </div>
             <div class="activities">
-                <a href="cardio.html">Cardio</a>
+                <a href="cardio.php">Cardio</a>
             </div>
             <div class="activities">
-                <a href="yoga.html">Yoga</a>
+                <a href="yoga.php">Yoga</a>
             </div>
             <div class="activities">
-                <a href="zumba.html">Zumba</a>
+                <a href="zumba.php">Zumba</a>
             </div>
         </div>
     </div>
