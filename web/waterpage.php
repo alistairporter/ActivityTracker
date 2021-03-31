@@ -12,7 +12,7 @@
 
 <body>
 	<div class="sign-in-page">
-        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
     </div>
 	
 	<div class="water-info-box">
