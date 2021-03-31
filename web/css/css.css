@@ -106,7 +106,7 @@ sign-up page
 .sign-up-form{
     max-width: 600px;
     width: 100%;
-    margin: 10% auto 15%;
+    margin: 5% auto 15%;
     padding: 1%;
     background: lightblue;
     text-align: center;
@@ -1120,20 +1120,30 @@ profile page
 }
 
 @media (max-width: 584px){
+    /*
+    logo
+    */
     .sign-in-page img{
         margin: 0;
         max-width: 100%;
    }
 
     .buttons{
-        margin-left: 35px;
-        margin-bottom: 10px;
-        width:100%;
+        max-width:100%;
+        height:100%;
+        margin-left: 30px;
+        display: flex;
     }
 
     .slide-container{
-        margin-left:30px;
         width: 100%;
+        margin-left: 8px;
+    }
+
+    .image-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
     }
 
     .slider-image{
