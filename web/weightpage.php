@@ -5,8 +5,8 @@
 <head>
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>
-	<link rel="Weight information" href="css/css.css">
+	<title>Weight information</title>
+	<link rel="stylesheet" href="css/css.css">
 	<script src="js/js.js"></script>
 </head>
 

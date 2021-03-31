@@ -34,8 +34,7 @@
     <p>Date</p>
     <div class="data-analyse-box">
         <p>Report(Daily/Weekly)</p>
-        <button type="button">Button1</button>
-        <button type="button">Button2</button>
+        <button type="button">View</button>
         <div class="data-box">
 
         </div>
@@ -43,17 +42,15 @@
 
     <div class="personal-status-box">
         <p>Personal Status</p>
-        <button type="button">Button1</button>
-        <button type="button">Button2</button>
+        <a href="weightpage.html"><button type="button">Modify</button></a>
         <div class="data-box">
 
         </div>
     </div>
 
-    <div class="hydrogen-box">
-        <p>Hydrogen situation</p>
-        <button type="button">Button1</button>
-        <button type="button">Button2</button>
+    <div class="hydration-box">
+        <p>Hydration status</p>
+        <a href="waterpage.html"><button type="button">Modify</button></a>
         <div class="data-box">
 
         </div>
