@@ -1,4 +1,4 @@
-body{
+    body{
     margin: 0;
     padding: 0;
 }
@@ -185,7 +185,7 @@ sign-in page
 
 .sign-in-page h1{
     width:100%;
-    margin: auto 450px; 
+    margin: auto; 
     text-align: center;
     font-size: 25px;
 }
