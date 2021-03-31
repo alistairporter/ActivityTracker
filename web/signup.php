@@ -45,6 +45,9 @@ session_start();
     ?>
 
 
+	<div class="sign-in-page">
+        <a href="index.html"><img src="images/logo.png" alt=""></a>
+    </div>
 
 	<div class="sign-up-form">
         <div class="title">Sign Up</div>
