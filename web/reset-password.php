@@ -12,7 +12,7 @@
 
 <body>
 	<div class="sign-in-page">
-        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <a href="index.php"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="reset-password-container">
