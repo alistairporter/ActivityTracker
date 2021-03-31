@@ -5,14 +5,14 @@
 <head>
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Walking</title>
+	<title>Profile</title>
 	<link rel="stylesheet" href="css/css.css">
 	<script src="js/js.js"></script>
 </head>
 
 <body>
     <div class="sign-in-page">  
-        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="profile-container">
