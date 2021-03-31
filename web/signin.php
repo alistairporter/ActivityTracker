@@ -53,7 +53,7 @@ session_start();
 
     ?>
 	<div class="sign-in-page">
-        <a href="index.html"><img src="images/logo.png" alt=""></a>
+        <a href="index.php"><img src="images/logo.png" alt=""></a>
         <h1>Welcome Back</h1>
     </div>
 	
