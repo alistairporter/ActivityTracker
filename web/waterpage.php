@@ -12,7 +12,7 @@
 
 <body>
 	<div class="sign-in-page">
-        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
     </div>
 	
 	<div class="water-info-box">
@@ -53,6 +53,10 @@
 			<p>Goal water</p>
 			<input type="text" placeholder="">
 		</div>
+
+		<div class="water-update-button">
+            <input type="submit" value="Update">
+        </div>
 	</div>
 </body>
 
