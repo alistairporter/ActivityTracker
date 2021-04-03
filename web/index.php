@@ -2,9 +2,10 @@
 // Start the session
 session_start();
 
+//if not logged in redirect to signin page 
 if ($_SESSION["username"]) {
-	header("Location: /signin.php");
-	exit();
+	//header("Location: /signin.php");
+	//exit();
 }
 
 ?>

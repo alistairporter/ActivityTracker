@@ -13,22 +13,22 @@
 <body>
 	
     <div class="sign-in-page">
-		<a href="homepage.html"><img src="images/logo.png" alt=""></a>
+		<a href="homepage.php"><img src="images/logo.png" alt=""></a>
         <div class="user-icon">
             <div class="dropbtn"><img src="images/user-icon.png" alt="user-icon"> 
                 <i class="drop-down"></i>
             </div>
               <div class="dropdown-content">
-                <a href="profile.html">My profile</a>
-                <a href="activity.html">Activities</a>
-                <a href="index.html">Logout</a>
+                <a href="profile.php">My profile</a>
+                <a href="activity.php">Activities</a>
+                <a href="index.php">Logout</a>
               </div>
         </div>
 	</div>	
 
     <div class="navbar">
-        <a href="homepage.html">Dashboard</a>
-        <a href="log.html">Log</a>
+        <a href="homepage.php">Dashboard</a>
+        <a href="log.php">Log</a>
     </div>
 
     <p>Date</p>
@@ -66,7 +66,7 @@
         </div>
 
         <div class="activity-box">
-            <a href="activity.html"><button type="activity-button">View activitie</button></a>
+            <a href="activity.php"><button type="activity-button">View activitie</button></a>
         </div>
     </div>
 
