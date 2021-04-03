@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hydrogen information</title>
+	<title>Hydration information</title>
 	<link rel="stylesheet" href="css/css.css">
 	<script src="js/js.js"></script>
 </head>
@@ -53,6 +53,10 @@
 			<p>Goal water</p>
 			<input type="text" placeholder="">
 		</div>
+
+		<div class="water-update-button">
+            <input type="submit" value="Update">
+        </div>
 	</div>
 </body>
 

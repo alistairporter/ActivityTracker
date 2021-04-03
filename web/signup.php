@@ -45,6 +45,9 @@ session_start();
     ?>
 
 
+	<div class="sign-in-page">
+        <a href="index.php"><img src="images/logo.png" alt=""></a>
+    </div>
 
 	<div class="sign-up-form">
         <div class="title">Sign Up</div>
@@ -91,7 +94,7 @@ session_start();
             </div>
         </form>
 
-        <p>Do you have an account? <a href="sign in.html">Sign in</a></p>
+        <p>Do you have an account? <a href="sign in.html">Signin</a></p>
     </div>
 	
 </body>
