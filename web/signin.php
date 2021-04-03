@@ -26,20 +26,27 @@ session_start();
             // select from user where username = $username
             // get password if password in db = $password
             // save session 
-            $sql = "SELECT password, firstname, username FROM user WHERE username = '$username'";
+            $sql = "SELECT password, firstname, username, id FROM user WHERE username = '$username'";
+            // prepare query
             $result = $conn->query($sql);
+            //get the result(fetch)
             $row = $result->fetch_assoc() ;
             if (!$result) {
                 die('Could not query:' . mysql_error());
             }
+            //after getting the result get the coloumn from rows 
             $passwordFromDb = $row['password'];
             $firstname = $row['firstname'];
             $username = $row['username'];
+            $id= $row['id'];
             if (password_verify ($passwordPlain, $passwordFromDb ) == true)
             {
                 echo "Hello " . $firstname ;
                 $_SESSION["username"] = $username;
                 $_SESSION["firstname"] = $firstname;
+                $_SESSION["userid"] = $id;
+                header("Location: /homepage.php");
+                exit();
 
 
             }
@@ -66,7 +73,7 @@ session_start();
                 </div>
                 <div class="input">
                     <span  class="details-input">Password: </span>
-                    <input type="text" name="password" placeholder="">
+                    <input type="password" name="password" placeholder="">
                 </div>
             </div>
 
