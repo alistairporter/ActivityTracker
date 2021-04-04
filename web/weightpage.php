@@ -76,11 +76,23 @@ if (!$_SESSION["username"]) {
 				<input type="text" placeholder="" name="currenWeight">      
 			</div>
 		</div>
-
-	        <div class="weight-update-button">
-	            <input type="submit" value="Update">
-	        </div>
+		
+		
+	        <div class="current-weight-box">
+		<div class="current-weight">
+			<p>Current weight</p>
+			<input type="text" placeholder="">
 		</div>
+
+        <div class="goal-weight-box">
+			<p>Goal weight</p>
+			<input type="text" placeholder="">
+		</div>
+
+        <div class="weight-update-button">
+            <input type="submit" value="Update">
+        </div>
+	</div>
 	</form>	
 </body>
 
