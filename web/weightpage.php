@@ -16,47 +16,65 @@ if (!$_SESSION["username"]) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Weight information</title>
 	<link rel="stylesheet" href="css/css.css">
-	<script src="js/js.js"></script>
+	<!-- <script src="js/js.js"></script> -->
 </head>
 
 <body>
 	<?php
 	 include "includes/database.php"; 
+	 //create variable
+	 $goalWeightdb = '';
+	 $totalLostdb = '';
+	 $currentWeightdb = '';
 
-	if($_SERVER["REQUEST_METHOD"] == "POST")
-        {
+	// now read from database select id by given username 
+	$userid =$_SESSION["userid"];
+
+
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		$goalWeight= $_POST["goalWeight"];
-		$totalLost= $_POST["totalLost"];
+		//$totalLost= $_POST["totalLost"];
 		$currenWeight = $_POST["currenWeight"];
-		// now read from database select id by given username 
-		$userid =$_SESSION["userid"];
+		
 		// insert values in the data base and userid 
 		
-		 $sql = "INSERT INTO weight (goalWeight, currenWeight, userid) VALUES ('$goalWeight','$currenWeight','$userid')";
+		 $sql = "INSERT INTO weight (goalWeight, currentWeight, userid) VALUES ('$goalWeight','$currenWeight','$userid')";
 		 if (mysqli_query($conn, $sql)) { 
-                //continue show the rest of html
-		 	// get the las id
-
-		 	header("Location: /weightpage.php?id=1");
-
-            } else {
-             echo "Error: " . $sql . "<br>" .
-                mysqli_error($conn); 
-            }
+            //continue show the rest of html
+	 		// get the las id
+	 		$lastId = $conn->insert_id;
+	 		header("Location: /weightpage.php?id=".$lastId);
+        } else {
+         echo "Error: " . $sql . "<br>" .
+            mysqli_error($conn); 
+        }
      //if it wasn't post do this        
 	} elseif (isset($_GET['id'])) {
 		$id = $_GET['id'];
 		//read from data base
-		$sql = "SELECT 'goalWeight, currenWeight FROM ";
+		$sql = "SELECT goalWeight, currentWeight FROM weight where id=$id and userid = $userid ";
 		$result = $conn->query($sql);
-            $row = $result->fetch_assoc() ;
-            if (!$result) {
-                die('Could not query:' . mysql_error());
-            }
+		//result array
+        $row = $result->fetch_assoc() ;
+        if (!$result) {
+            die('Could not query:' . mysql_error());
+        }
+        $sqlOld = "SELECT goalWeight, currentWeight FROM weight where userid = $userid order by id asc limit 1";
+		$resultOld = $conn->query($sqlOld);
+		//result array
+        $rowOld = $resultOld->fetch_assoc() ;
+        if (!$resultOld) {
+            die('Could not query:' . mysql_error());
+        }
+
+        $currentWeightdbOld = $rowOld['currentWeight'];
+	 	$currentWeightdb = $row['currentWeight'];
+	 	$goalWeightdb = $row['goalWeight'];
+
+	 	$totalLostdb = $currentWeightdb-$currentWeightdbOld;
+
 
 	} 
-
-
 	?>
 
 
@@ -69,11 +87,11 @@ if (!$_SESSION["username"]) {
 			<p>Weight</p>
 			<div class="weight-goal-box">
 				<p>Goal weight</p>
-				<input type="text" placeholder="" name="goalWeight">
+				<input type="text" placeholder="" value="<?php echo $goalWeightdb; ?>" readonly >
 	            <p>Total lost</p>
-				<input type="text" placeholder="" name="totalLost">
+				<input type="text" placeholder="" value="<?php echo $totalLostdb; ?>" readonly>
 	            <p>Current weight</p>
-				<input type="text" placeholder="" name="currenWeight">      
+				<input type="text" placeholder="" value="<?php echo $currentWeightdb; ?>" >      
 			</div>
 		</div>
 		
@@ -81,16 +99,16 @@ if (!$_SESSION["username"]) {
 	        <div class="current-weight-box">
 		<div class="current-weight">
 			<p>Current weight</p>
-			<input type="text" placeholder="">
+			<input type="text" placeholder="" name="currentWeight">
 		</div>
 
         <div class="goal-weight-box">
 			<p>Goal weight</p>
-			<input type="text" placeholder="">
+			<input type="text" placeholder="" name="goalWeight" value="<?php echo $goalWeightdb; ?>">
 		</div>
 
         <div class="weight-update-button">
-            <input type="submit" value="Update">
+            <input type="submit" value="Update"ß>
         </div>
 	</div>
 	</form>	
