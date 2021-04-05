@@ -1,4 +1,4 @@
-  body{
+     body{
     margin: 0;
     padding: 0;
 }
@@ -540,19 +540,46 @@ water page
 }
 
 .water-info-box .water-goal-box{
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 220px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
     background: white;
     border-radius: 50%;
     text-align: center;
-
 }
 
-.water-goal-box input{
+.water-goal-box .goal-water{
+    margin-top: 30px;
+    display: inline-flex;
+}
+
+.goal-water p{
+    font-size: 25px;
+}
+
+.goal-water input{
     width: 100px;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.water-goal-box .water-consumed{
+    margin-top: -10px;
+    display: inline-flex;
+}
+
+.water-consumed p{
+    font-size: 25px;
+}
+
+.water-consumed input{
+    width: 100px;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .water-box{
@@ -563,13 +590,11 @@ water page
     display: inline-flex;
 }
 
-.add-water p{
-    margin-right:20px;
-}
-
 .add-water input{
     width:65px;
     margin:auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .water-box .goal-water-box{
@@ -578,12 +603,13 @@ water page
 
 .goal-water-box p{
     margin-left: 20px;
-    margin-right:20px;
 }
 
 .goal-water-box input{
     width:65px;
     margin:auto;
+    margin-left: 5px;
+    margin-right: -15px;
 }
 
 
