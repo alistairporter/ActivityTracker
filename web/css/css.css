@@ -527,6 +527,7 @@ homepage
 /*
 water page
 */
+
 .water-info-box{
     max-width: 550px;
     width: 100%;
@@ -539,26 +540,26 @@ water page
 }
 
 .water-info-box .water-goal-box{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     padding: 20px;
     margin-left: auto;
     margin-right: auto;
     background: white;
-    margin-top:20px;
-    border-radius: 50%; 
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+.water-goal-box input{
+    width: 100px;
+}
+
+.water-box{
     text-align: center;
 }
 
-.water-goal-box p{
-    margin-top: 5px;
-}
-
-.add-water-box{
-    text-align: center;
-}
-
-.add-water-box .add-water{
+.water-box .add-water{
     display: inline-flex;
 }
 
@@ -566,36 +567,34 @@ water page
     margin-right:20px;
 }
 
-.add-water select{
-    font-size: 16px;
-    margin:auto;
-}
-
-.goal-water-box{
-    text-align: center;;
-}
-
-.goal-water-box .goal-water{
-    display: inline-flex;
-}
-
-.goal-water p{
-    margin-right:20px;
-}
-
-.goal-water input{
+.add-water input{
     width:65px;
     margin:auto;
 }
 
-.goal-water-box .water-update-button{
+.water-box .goal-water-box{
+    display: inline-flex;
+}
+
+.goal-water-box p{
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.goal-water-box input{
+    width:65px;
+    margin:auto;
+}
+
+
+.water-box .water-update-button{
     height:20px;
     margin:20px 0;
     text-align: center;
     margin-top: 30px;
 }
 
-.goal-water-box .water-update-button input{
+.water-box .water-update-button input{
     padding: 5px;
     border-radius: 5px;
     font-size: 15px;
@@ -603,7 +602,7 @@ water page
     letter-spacing: 1px;
 }
 
-.goal-water-box .water-update-button input:hover{
+.water-box .water-update-button input:hover{
     background-color:#000;
 	transition:0.6s ease;
 	color:#fff;
