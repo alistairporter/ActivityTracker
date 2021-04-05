@@ -1,4 +1,4 @@
-     body{
+body{
     margin: 0;
     padding: 0;
 }
@@ -803,29 +803,40 @@ yoga page
 }
 
 .yoga-duration-container{
-    margin-top: -220px;
+    margin-top: -210px;
     text-align: center;
-    display: block;
 }
 
-.yoga-duration-container .yoga-duration{
+.yoga-duration-container .duration{
     display: inline-flex;
 }
 
-.yoga-duration-container p{
-    margin-right:20px;
-}
-
-.yoga-duration-container input{
+.yoga-duration-container .duration input{
     width:65px;
     margin:auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.yoga-duration-container .calories-burnt{
+    display: inline-flex;
+}
+
+.yoga-duration-container .calories-burnt p{
+    margin-left: 20px;
+}
+
+.yoga-duration-container .calories-burnt input{
+    width:65px;
+    margin:auto;
+    margin-left: 5px;
+    margin-right: -15px;
 }
 
 .yoga-duration-container .submit-button{
     height:20px;
     margin:20px 0;
     text-align: center;
-
 }
 
 .yoga-duration-container .submit-button input{
@@ -873,29 +884,34 @@ zumba page
 }
 
 .zumba-duration-container{
-    margin-top: -220px;
+    margin-top: -210px;
     text-align: center;
-    display: block;
 }
 
-.zumba-duration-container .zumba-duration{
+.zumba-duration-container .duration{
     display: inline-flex;
 }
 
-.zumba-duration-container p{
-    margin-right:20px;
-}
-
-.zumba-duration-container input{
+.zumba-duration-container .duration input{
     width:65px;
     margin:auto;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.zumba-duration-container .submit-button{
-    height:20px;
-    margin:20px 0;
-    text-align: center;
+.zumba-duration-container .calories-burnt{
+    display: inline-flex;
+}
 
+.zumba-duration-container .calories-burnt p{
+    margin-left: 20px;
+}
+
+.zumba-duration-container .calories-burnt input{
+    width:65px;
+    margin:auto;
+    margin-left: 5px;
+    margin-right: -15px;
 }
 
 .zumba-duration-container .submit-button input{
@@ -904,6 +920,7 @@ zumba page
     font-size: 15px;
     border: 1px solid black;
     letter-spacing: 1px;
+    margin-top: 10px;
 }
 
 .zumba-duration-container .submit-button input:hover{
@@ -943,22 +960,34 @@ cardio page
 }
 
 .cardio-duration-container{
-    margin-top: -220px;
+    margin-top: -210px;
     text-align: center;
-    display: block;
 }
 
-.cardio-duration-container .cardio-duration{
+.cardio-duration-container .duration{
     display: inline-flex;
 }
 
-.cardio-duration-container p{
-    margin-right:20px;
-}
-
-.cardio-duration-container input{
+.cardio-duration-container .duration input{
     width:65px;
     margin:auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.cardio-duration-container .calories-burnt{
+    display: inline-flex;
+}
+
+.cardio-duration-container .calories-burnt p{
+    margin-left: 20px;
+}
+
+.cardio-duration-container .calories-burnt input{
+    width:65px;
+    margin:auto;
+    margin-left: 5px;
+    margin-right: -15px;
 }
 
 .cardio-duration-container .submit-button{
