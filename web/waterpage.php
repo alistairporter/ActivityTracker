@@ -18,23 +18,32 @@
 	<div class="water-info-box">
 		<p>Water</p>
 		<div class="water-goal-box">
-			<p>Goal</p>
-			<input type="text" placeholder="Liter">
-			<p>Water</p>
-			<input type="text" placeholder="Liter">
+			<div class="goal-water">
+				<p>Goal: </p>
+				<input type="text" placeholder="">
+				<p> Liter</p>
+			</div>
+
+			<div class="water-consumed">
+				<p>Water: </p>
+				<input type="text" placeholder="">
+				<p>Liter</p>
+			</div>
 		</div>
 	</div>
 
 	<div class="water-box">
 		<div class="add-water">
-			<p>Add water </p>
-			<input type="text" placeholder="Liter">
+			<p>Add water: </p>
+			<input type="text" placeholder="">
+			<p>Liter</p>
 		</div>
 	
 
 		<div class="goal-water-box">
-			<p>Goal water</p>
-			<input type="text" placeholder="Liter">
+			<p>Goal water:</p>
+			<input type="text" placeholder="">
+			<p>Liter</p>
 		</div>
 
 		<div class="water-update-button">
