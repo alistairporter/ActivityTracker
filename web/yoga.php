@@ -62,7 +62,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 ?>
     <div class="sign-in-page">
-        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="yoga-container">
@@ -75,13 +75,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="yoga-duration-container">
         <div class="duration">
 			<p>Duration: </p>
+<<<<<<< HEAD
 			<input type="text" placeholder="" name="durationMin">
+=======
+			<input type="text" placeholder="">
+>>>>>>> 6d0e6b1cf9e675c014574995a53eea868ab257bc
 			<p>minutes</p>
 		</div>
 	
 		<div class="calories-burnt">
 			<p>Calorie burnt:</p>
+<<<<<<< HEAD
 			<input type="text" placeholder="" value="<?php echo $burntCaloriesdb; ?>">
+=======
+			<input type="text" placeholder="">
+>>>>>>> 6d0e6b1cf9e675c014574995a53eea868ab257bc
 			<p>cal</p>
 		</div>
 

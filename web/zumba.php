@@ -65,7 +65,7 @@ if (!$_SESSION["username"]) {
 
 	?>
     <div class="sign-in-page">
-        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="zumba-container">
@@ -75,6 +75,7 @@ if (!$_SESSION["username"]) {
         </div>
     </div>
 
+<<<<<<< HEAD
     <form action="#" method="post">
 	    <div class="zumba-duration-container">
 	        <div class="duration">
@@ -95,6 +96,25 @@ if (!$_SESSION["username"]) {
 	    </div>
 	</form>    
 
+=======
+    <div class="zumba-duration-container">
+        <div class="duration">
+			<p>Duration: </p>
+			<input type="text" placeholder="">
+			<p>minutes</p>
+		</div>
+	
+		<div class="calories-burnt">
+			<p>Calorie burnt:</p>
+			<input type="text" placeholder="">
+			<p>cal</p>
+		</div>
+
+        <div class="submit-button">
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+>>>>>>> 6d0e6b1cf9e675c014574995a53eea868ab257bc
 </body>
 
 </html>
