@@ -12,7 +12,7 @@
 
 <body>
     <div class="sign-in-page">
-        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="yoga-container">
@@ -23,10 +23,18 @@
     </div>
 
     <div class="yoga-duration-container">
-        <div class="yoga-duration">
-            <p>Duration</p>
-            <input type="time" placeholder="">
-        </div>
+        <div class="duration">
+			<p>Duration: </p>
+			<input type="text" placeholder="">
+			<p>minutes</p>
+		</div>
+	
+		<div class="calories-burnt">
+			<p>Calorie burnt:</p>
+			<input type="text" placeholder="">
+			<p>cal</p>
+		</div>
+
         <div class="submit-button">
             <input type="submit" value="Submit">
         </div>
