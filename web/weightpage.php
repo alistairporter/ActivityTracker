@@ -34,11 +34,11 @@ if (!$_SESSION["username"]) {
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		$goalWeight= $_POST["goalWeight"];
 		//$totalLost= $_POST["totalLost"];
-		$currenWeight = $_POST["currenWeight"];
+		$currentWeight = $_POST["currentWeight"];
 		
 		// insert values in the data base and userid 
 		
-		 $sql = "INSERT INTO weight (goalWeight, currentWeight, userid) VALUES ('$goalWeight','$currenWeight','$userid')";
+		 $sql = "INSERT INTO weight (goalWeight, currentWeight, userid) VALUES ('$goalWeight','$currentWeight','$userid')";
 		 if (mysqli_query($conn, $sql)) { 
             //continue show the rest of html
 	 		// get the las id
@@ -48,7 +48,7 @@ if (!$_SESSION["username"]) {
          echo "Error: " . $sql . "<br>" .
             mysqli_error($conn); 
         }
-     //if it wasn't post do this        
+     //if it wasn't post do this          
 	} elseif (isset($_GET['id'])) {
 		$id = $_GET['id'];
 		//read from data base
