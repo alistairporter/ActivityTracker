@@ -20,52 +20,54 @@ if (!$_SESSION["username"]) {
 </head>
 
 <body>
-			<?php
-				include "includes/database.php"; 
-				$durationMindb = '';
-				$burntCaloriesdb = '';
+	<?php
+		include "includes/database.php"; 
+		$durationMindb = '';
+		$burntCaloriesdb = '';
+		$typedb = '';
 
+		// now read from database select id by given username 
+		$userid =$_SESSION["userid"];
 
-				// now read from database select id by given username 
-				$userid =$_SESSION["userid"];
+	if($_SERVER["REQUEST_METHOD"] == "POST") {
+		$durationMin= $_POST["durationMin"];
+		$burntCalories = $durationMin * 9.5;
+		$type="zumba";
+		
+	// insert values in the data base and userid 
+		$sql = "INSERT INTO activity(durationMin, burntCalories, userid, type) VALUE ($durationMin, $burntCalories, $userid,'$type') ";
 
-			if($_SERVER["REQUEST_METHOD"] == "POST") {
-				$durationMin= $_POST["durationMin"];
-				$burntCalories = $durationMin * 9.5;
-			
-			// insert values in the data base and userid 
-				$sql = "INSERT INTO zumba(durationMin, burntCalories, userid) VALUE ($durationMin, $burntCalories, $userid) ";
-				if (mysqli_query($conn, $sql)) { 
-			            //continue show the rest of html
-				 		// get the las id
-				 		$lastId = $conn->insert_id;
-				 		header("Location: /zumba.php?id=".$lastId);
-				}
-			
-				else {
-			         echo "Error: " . $sql . "<br>" .
-			            mysqli_error($conn); 
-			        }
-			    }
-			        elseif (isset($_GET['id'])) {
-						$id = $_GET['id'];
-						//read from data base
-						$sql = "SELECT durationMin, burntCalories FROM zumba where id=$id and userid = $userid ";
-						$result = $conn->query($sql);
-						//result array
-				        $row = $result->fetch_assoc() ;
-			        	if (!$result) {
-			            die('Could not query:' . mysql_error());
-			        	}
-			        $durationMindb = $row['durationMin'];
-					$burntCaloriesdb = $row['burntCalories'];
-				}
+		if (mysqli_query($conn, $sql)) { 
+	        //continue show the rest of html
+	 		// get the las id
+	 		$lastId = $conn->insert_id;
+	 		header("Location: /zumba.php?id=".$lastId);
+		}
+	
+		else {
+	         echo "Error: " . $sql . "<br>" .
+	         mysqli_error($conn); 
+	        }
+	    }
+	        elseif (isset($_GET['id'])) {
+				$id = $_GET['id'];
+				//read from data base
+				$sql = "SELECT durationMin, burntCalories FROM activity where id=$id and userid = $userid ";
+				$result = $conn->query($sql);
+				//result array
+		        $row = $result->fetch_assoc() ;
+	        	if (!$result) {
+	            die('Could not query:' . mysql_error());
+	        } 
+	        $durationMindb = $row['durationMin'];
+			$burntCaloriesdb = $row['burntCalories'];
+		}
 
 
 
 	?>
     <div class="sign-in-page">
-        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="zumba-container">
@@ -94,6 +96,7 @@ if (!$_SESSION["username"]) {
 	        </div>
 	    </div>
 	</form>    
+
 </body>
 
 </html>

@@ -21,48 +21,51 @@ if (!$_SESSION["username"]) {
 
 <body>
 <?php
-	include "includes/database.php"; 
-	$durationMindb = '';
-	$burntCaloriesdb = '';
+				include "includes/database.php"; 
+				$durationMindb = '';
+				$burntCaloriesdb = '';
+				$typedb = '';
 
 
-	// now read from database select id by given username 
-	$userid =$_SESSION["userid"];
+				// now read from database select id by given username 
+				$userid =$_SESSION["userid"];
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-	$durationMin= $_POST["durationMin"];
-	$burntCalories = $durationMin * 4;
-
-// insert values in the data base and userid 
-	$sql = "INSERT INTO yoga(durationMin, burntCalories, userid) VALUE ($durationMin, $burntCalories, $userid) ";
-	if (mysqli_query($conn, $sql)) { 
-		//continue show the rest of html
-		// get the las id
-		$lastId = $conn->insert_id;
-		header("Location: /yoga.php?id=".$lastId);
-	}
-
-	else {
-         echo "Error: " . $sql . "<br>" .
-            mysqli_error($conn); 
-        }
-    }
-        elseif (isset($_GET['id'])) {
-			$id = $_GET['id'];
-			//read from data base
-			$sql = "SELECT durationMin, burntCalories FROM yoga where id=$id and userid = $userid ";
-			$result = $conn->query($sql);
-			//result array
-	        $row = $result->fetch_assoc() ;
-        	if (!$result) {
-            die('Could not query:' . mysql_error());
-        	}
-        $durationMindb = $row['durationMin'];
-		$burntCaloriesdb = $row['burntCalories'];
-	}
+			if($_SERVER["REQUEST_METHOD"] == "POST") {
+				$durationMin= $_POST["durationMin"];
+				
+				$burntCalories = $durationMin * 9.5;
+				$type = "yoga";
+			
+			// insert values in the data base and userid 
+				$sql = "INSERT INTO activity(durationMin, burntCalories, userid, type) VALUE ($durationMin, $burntCalories, $userid, '$type') ";
+				if (mysqli_query($conn, $sql)) { 
+			            //continue show the rest of html
+				 		// get the las id
+				 		$lastId = $conn->insert_id;
+				 		header("Location: /yoga.php?id=".$lastId);
+				}
+			
+				else {
+			         echo "Error: " . $sql . "<br>" .
+			            mysqli_error($conn); 
+			        }
+			    }
+			        elseif (isset($_GET['id'])) {
+						$id = $_GET['id'];
+						//read from data base
+						$sql = "SELECT durationMin, burntCalories FROM activity where id=$id and userid = $userid ";
+						$result = $conn->query($sql);
+						//result array
+				        $row = $result->fetch_assoc() ;
+			        	if (!$result) {
+			            die('Could not query:' . mysql_error());
+			        	}
+			        $durationMindb = $row['durationMin'];
+					$burntCaloriesdb = $row['burntCalories'];
+				}
 ?>
     <div class="sign-in-page">
-        <a href="homepage.html"><img src="images/logo.png" alt=""></a>
+        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
     </div>
 
     <div class="yoga-container">
@@ -71,6 +74,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="images/yoga.jpg" alt="">
         </div>
     </div>
+    <form action="#" method="post">
 
     <div class="yoga-duration-container">
         <div class="duration">
@@ -78,6 +82,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 			<input type="text" placeholder="" name="durationMin">
 			<p>minutes</p>
 		</div>
+	
 		<div class="calories-burnt">
 			<p>Calorie burnt:</p>
 			<input type="text" placeholder="" value="<?php echo $burntCaloriesdb; ?>">
@@ -88,6 +93,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="submit" value="Submit">
         </div>
     </div>
+</form>
 </body>
 
 </html>
