@@ -28,8 +28,8 @@ CREATE TABLE `user` (
   `firstname` varchar(100) DEFAULT NULL,
   `lastname` varchar(100) DEFAULT NULL,
   `age` int(3) DEFAULT NULL,
-  `sex` varchar(100) default NULL,
-  `height` decimal(6,0),
+  --`sex` varchar(100) default NULL,
+ -- `height` decimal(6,0),
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
