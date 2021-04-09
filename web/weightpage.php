@@ -80,7 +80,7 @@ if (!$_SESSION["username"]) {
 
 	<form action="#" method="post" >
 		<div class="sign-in-page">
-	        <a href="homepage.php"><img src="images/logo.png" alt=""></a>
+	        <a href="homepage.php"><img src="images/logo1.png" alt=""></a>
 	    </div>
 		
 		<div class="weight-info-box">
