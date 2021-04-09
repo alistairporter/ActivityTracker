@@ -22,9 +22,9 @@ if ($_SESSION["username"]) {
 </head>
 
 <body>
-	<div class="logo">
-		<a href="index.php"><img src="images/logo.png" alt=""></a>
-	</div>	
+	<div class="sign-in-page">  
+        <a href="index.php"><img src="images/logo1.png" alt=""></a>
+    	</div>	
 <?php echo 'Welcome '. $_SESSION["firstname"]; ?>
 	<div class="buttons" >
 		<!-- sepi :  removed space from filename -->
