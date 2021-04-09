@@ -28,8 +28,6 @@ CREATE TABLE `user` (
   `firstname` varchar(100) DEFAULT NULL,
   `lastname` varchar(100) DEFAULT NULL,
   `age` int(3) DEFAULT NULL,
-  --`sex` varchar(100) default NULL,
- -- `height` decimal(6,0),
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
@@ -78,7 +76,8 @@ CREATE TABLE `activity` (
   `type` varchar(100) DEFAULT NULL,
   `distance` decimal(6,0) DEFAULT NULL,
   `starttime` TIMESTAMP DEFAULT now(),
-  `finishtime` TIMESTAMP,
+  `durationmin` int(5) DEFAULT NULL,
+  `finishtime` TIMESTAMP DEFAULT now(),
   `averagespeed` decimal(6,0) DEFAULT NULL,
   `heightclimbed` decimal(6,0) DEFAULT NULL,
   `caloriesburnt` int(11) DEFAULT NULL,

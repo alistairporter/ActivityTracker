@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+//if not logged in redirect to signin page 
+if (!$_SESSION["username"]) {
+        header("Location: /signin.php");
+        exit();
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -26,7 +35,7 @@
 		$type="running";
 		
 	// insert values in the data base and userid 
-		$sql = "INSERT INTO activity(durationMin, burntCalories, userid, type) VALUE ($durationMin, $burntCalories, $userid,'$type') ";
+		$sql = "INSERT INTO activity(durationmin, caloriesburnt, userid, type) VALUE ($durationMin, $burntCalories, $userid,'$type') ";
 
 		if (mysqli_query($conn, $sql)) { 
 	        //continue show the rest of html
@@ -43,15 +52,15 @@
 	        elseif (isset($_GET['id'])) {
 				$id = $_GET['id'];
 				//read from data base
-				$sql = "SELECT durationMin, burntCalories FROM activity where id=$id and userid = $userid ";
+				$sql = "SELECT durationmin, caloriesburnt FROM activity where id=$id and userid = $userid ";
 				$result = $conn->query($sql);
 				//result array
 		        $row = $result->fetch_assoc() ;
 	        	if (!$result) {
 	            die('Could not query:' . mysql_error());
 	        } 
-	        $durationMindb = $row['durationMin'];
-			$burntCaloriesdb = $row['burntCalories'];
+	        $durationMindb = $row['durationmin'];
+			$burntCaloriesdb = $row['caloriesBurnt'];
 		}
 
 
@@ -83,7 +92,7 @@
         <p>cal</p>
       </div>
       <div class="submit-button">
-        <imput type="submit" value="submit">
+        <input type="submit" value="submit">
       </div>
     </div>
     </form>
