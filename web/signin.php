@@ -41,7 +41,7 @@ session_start();
             $id= $row['id'];
             if (password_verify ($passwordPlain, $passwordFromDb ) == true)
             {
-                echo "Hello " . $firstname ;
+                //echo "Hello " . $firstname ;
                 $_SESSION["username"] = $username;
                 $_SESSION["firstname"] = $firstname;
                 $_SESSION["userid"] = $id;

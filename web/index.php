@@ -25,7 +25,6 @@ if ($_SESSION["username"]) {
 	<div class="sign-in-page">  
         <a href="index.php"><img src="images/logo1.png" alt=""></a>
     	</div>	
-<?php echo 'Welcome '. $_SESSION["firstname"]; ?>
 	<div class="buttons" >
 		<!-- sepi :  removed space from filename -->
 		<!-- sepi changed signin/sinup to . php -->

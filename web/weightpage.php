@@ -30,7 +30,7 @@ if (!$_SESSION["username"]) {
 	// now read from database select id by given username 
 	$userid =$_SESSION["userid"];
 
-
+	//
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		$goalWeight= $_POST["goalWeight"];
 		//$totalLost= $_POST["totalLost"];
@@ -73,7 +73,10 @@ if (!$_SESSION["username"]) {
 
 	 	$totalLostdb = $currentWeightdb-$currentWeightdbOld;
 
-
+	 	$sqlLost = "UPDATE weight set totalLost = $totalLostdb where id=$id and userid = $userid ";
+		if (mysqli_query($conn, $sqlLost)) {
+			die('Could not query:' . mysql_error());
+		}
 	} 
 	?>
 

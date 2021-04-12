@@ -1,3 +1,12 @@
+<?php
+// Start the session
+session_start();
+//if not logged in redirect to signin page 
+if (!$_SESSION["username"]) {
+    header("Location: /signin.php");
+    exit();
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -11,27 +20,75 @@
 </head>
 
 <body>
+    <?php
+    //connect to database
+        include "includes/database.php";
+
+        $totalWloss='';
+        $Weight='';
+        $totalWater='';
+        $goalWater=''; 
+        $burntCalories='';
+
+        // get the details of the logged in user 
+        $userid =$_SESSION["userid"];
+
+        $sqlweight = "SELECT totalLost, currentWeight From weight WHERE userid = $userid order by id desc limit 1 ";
+        // fetch the result 
+        $result = $conn->query($sqlweight);
+        $row = $result->fetch_assoc();
+        if (!$result) {
+            die('Could not query:' . mysql_error());
+        }
+
+        $totalWloss= $row['totalLost'];
+        $weight=$row['currentWeight']; 
+ 
+
+        $sqlwater = "SELECT water, goalWater FROM water WHERE userid = $userid order by id desc limit 1";
+        
+        $resultWater = $conn->query($sqlwater);
+        $rowWater = $resultWater->fetch_assoc();
+        
+        if (!$result) {
+            die('Could not query:' . mysql_error());
+        }
+
+        $totalWater=$rowWater['water'];
+        $goalWater=$rowWater['goalWater'];
+
+        $sqlCal="SELECT burntCalories From activity WHERE userid = $userid order by id desc limit 1 ";
+
+        $resultcalorie = $conn->query($sqlCal);
+        $rowcalorie = $resultcalorie->fetch_assoc();
+        
+        if (!$result) {
+            die('Could not query:' . mysql_error());
+        }
+        $burntCalories=$rowcalorie['burntCalories'];
+    ?> 
 	
     <div class="sign-in-page">
-		<a href="homepage.html"><img src="images/logo1.png" alt=""></a>
+		<a href="homepage.php"><img src="images/logo1.png" alt=""></a>
         <div class="user-icon">
             <div class="dropbtn"><img src="images/user-icon.png" alt="user-icon"> 
                 <i class="drop-down"></i>
             </div>
               <div class="dropdown-content">
-                <a href="profile.html">My profile</a>
-                <a href="activity.html">Activities</a>
-                <a href="index.html">Logout</a>
+                <a href="profile.php">My profile</a>
+                <a href="activity.php">Activities</a>
+                <a href="logout.php">Logout</a>
               </div>
         </div>
 	</div>	
 
     <div class="navbar">
-        <a href="homepage.html">Dashboard</a>
+        <a href="homepage.php"></a>
     </div>
     
     <div class="date">
-        <p>Date</p>
+        <!--php code that show's today's date-->
+        <p> <?php echo "Today's Date:".date("y/m/d")."<br>"; ?> </p>
     </div>
     
     <div class="data-analyse-box">
@@ -42,48 +99,54 @@
         </div>
     </div>
 
-    <div class="personal-status-box">
-        <p>Weight Information</p>
-        <a href="weightpage.html"><button type="button">Update</button></a>
-        <div class="data-box">
-            <div class="weight-loss">
-                <p>Total loss:</p>
-			    <input type="text" placeholder="">
-            </div>
-
-            <div class="weights">
-                <p>Weight:</p>
-			    <input type="text" placeholder="">
-            </div>
-        </div>
-    </div>
-
-    <div class="hydration-box">
-        <p>Hydration status</p>
-        <a href="waterpage.html"><button type="button">Update</button></a>
-        <div class="data-box">
-            <div class="total-water">
-                <p>Total water:</p>
-			    <input type="text" placeholder="">
-            </div>
-
-            <div class="goal">
-                <p>Goal:</p>
-			    <input type="text" placeholder="">
+    
+        <div class="personal-status-box">
+            <p>Weight Information</p>
+            <a href="weightpage.php"><button type="button">Update</button></a>
+            <div class="data-box">
+                <div class="weight-loss">
+                    <p>Total loss:</p>
+    			    <input type="text" placeholder="" value="<?php echo $totalWloss; ?>" readonly>
+                </div>
+ 
+                <div class="weights">
+                    <p>Weight:</p>
+    			    <input type="text" placeholder="" value="<?php echo $weight;?>" readonly>
+                </div>
             </div>
         </div>
-    </div>
+    
 
-    <div class="extra-box">
-        <div class="calories-burnt-box">
-            <p>Calorie burnt</p>
-            <input type="text" placeholder="">
-        </div>
+  
+        <div class="hydration-box">
+            <p>Hydration status</p>
+            <a href="waterpage.php"><button type="button">Update</button></a>
+            <div class="data-box">
+                <div class="total-water">
+                    <p>Total water:</p>
+    			    <input type="text" placeholder="" value="<?php echo $totalWater ?>" readonly>
+                </div>
 
-        <div class="activity-box">
-            <a href="activity.html"><button type="activity-button">View activitie</button></a>
+                <div class="goal">
+                    <p>Goal:</p>
+    			    <input type="text" placeholder="" value="<?php echo $goalWater; ?>" readonly>
+                </div>
+            </div>
         </div>
-    </div>
+      
+      
+
+        <div class="extra-box">
+            <div class="calories-burnt-box">
+                <p>Calorie burnt</p>
+                <input type="text" placeholder="" value="<?php echo $burntCalories;?>" readonly>
+            </div>
+
+            <div class="activity-box">
+                <a href="activity.php"><button type="activity-button">View activitie</button></a>
+            </div>
+        </div>
+  
 
     <div class="content-box">
         
