@@ -73,9 +73,8 @@ if (!$_SESSION["username"]) {
 
 	 	$totalLostdb = $currentWeightdb-$currentWeightdbOld;
 
-	 	$sqlLost = "UPDATE weight set totalLost = $totalLostdb where id=$id and userid = $userid ";
+	  	$sqlLost = "UPDATE weight set totalLost = $totalLostdb where id = $id and userid = $userid ";
 		if (mysqli_query($conn, $sqlLost)) {
-			die('Could not query:' . mysql_error());
 		}
 	} 
 	?>

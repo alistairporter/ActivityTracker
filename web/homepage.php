@@ -6,6 +6,15 @@ if (!$_SESSION["username"]) {
     header("Location: /signin.php");
     exit();
 }
+
+
+
+include "includes/database.php";
+$sqlChart = "SELECT sum(burntCalories) as burntCalories, type FROM activity group by type ";
+$resultChart = $conn->query($sqlChart);
+
+        
+
 ?>
 <!DOCTYPE html>
 
@@ -16,24 +25,62 @@ if (!$_SESSION["username"]) {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home</title>
 	<link rel="stylesheet" href="css/css.css">
-	<script src="js/js.js"></script>
+	
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Activity' , 'Calorie burnt'],
+            <?php
+            if(mysqli_num_rows($resultChart)>0){
+                while($rowChart = mysqli_fetch_array($resultChart))
+                {
+                    echo "['".$rowChart['type']."',".$rowChart['burntCalories']."],";
+                }
+            }
+          ?>
+          
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Daily Report',
+            
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+
+
+
 </head>
 
 <body>
+
+
     <?php
     //connect to database
-        include "includes/database.php";
+        //include "includes/database.php";
 
         $totalWloss='';
         $Weight='';
         $totalWater='';
         $goalWater=''; 
         $burntCalories='';
+        $today = date("Y-m-d");
 
         // get the details of the logged in user 
         $userid =$_SESSION["userid"];
 
-        $sqlweight = "SELECT totalLost, currentWeight From weight WHERE userid = $userid order by id desc limit 1 ";
+        $sqlweight = "SELECT totalLost, currentWeight From weight WHERE userid = $userid and DATE(date) = '$today' order by id desc limit 1";
         // fetch the result 
         $result = $conn->query($sqlweight);
         $row = $result->fetch_assoc();
@@ -45,7 +92,7 @@ if (!$_SESSION["username"]) {
         $weight=$row['currentWeight']; 
  
 
-        $sqlwater = "SELECT water, goalWater FROM water WHERE userid = $userid order by id desc limit 1";
+        $sqlwater = "SELECT water, goalWater FROM water WHERE userid = $userid and DATE(date) = '$today' order by id desc limit 1";
         
         $resultWater = $conn->query($sqlwater);
         $rowWater = $resultWater->fetch_assoc();
@@ -57,7 +104,7 @@ if (!$_SESSION["username"]) {
         $totalWater=$rowWater['water'];
         $goalWater=$rowWater['goalWater'];
 
-        $sqlCal="SELECT burntCalories From activity WHERE userid = $userid order by id desc limit 1 ";
+        $sqlCal="SELECT burntCalories From activity WHERE userid = $userid and DATE(date) = '$today' order by id desc limit 1 ";
 
         $resultcalorie = $conn->query($sqlCal);
         $rowcalorie = $resultcalorie->fetch_assoc();
@@ -91,10 +138,11 @@ if (!$_SESSION["username"]) {
         <p> <?php echo "Today's Date:".date("y/m/d")."<br>"; ?> </p>
     </div>
     
+    <!-- chart location-->
+
     <div class="data-analyse-box">
-        <p>Report(Daily/Weekly)</p>
         <button type="button">View</button>
-        <div class="data-box">
+        <div class="data-box"  id="columnchart_material">
 
         </div>
     </div>
