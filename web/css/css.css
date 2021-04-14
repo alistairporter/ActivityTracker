@@ -1143,6 +1143,12 @@ Running page
     margin-top: -200px;  
 }
 
+.running-duration-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin-top: 20px;  
+}
 
 .running-button-container button{
     font-size: 20px;
@@ -1180,6 +1186,12 @@ cycling page
     margin-top: -200px;  
 }
 
+.cycling-duration-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin-top: 20px;  
+}
 
 .cycling-button-container button{
     font-size: 20px;
@@ -1215,6 +1227,13 @@ walking page
     width: 100%;  
     height: 50px;  
     margin-top: -200px;  
+}
+
+.walking-duration-container{  
+    text-align: center;   
+    width: 100%;  
+    height: 50px;  
+    margin-top: 20px;  
 }
 
 
