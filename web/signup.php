@@ -94,7 +94,7 @@ session_start();
             </div>
         </form>
 
-        <p>Do you have an account? <a href="sign in.html">Signin</a></p>
+        <p>Do you have an account? <a href="signin.php">Signin</a></p>
     </div>
 	
 </body>
