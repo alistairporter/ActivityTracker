@@ -161,7 +161,7 @@ if (!$_SESSION["username"]) {
 
 	    // Get a nice map tile from google maps
 	    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" +
-	      geoPoint + "&zoom=14&size=400x300&sensor=false&key=AIzaSyAiz04dIyeJ5NSgqXEnwr6-ZgG1wtXDkes";
+	      geoPoint + "&markers=" + geoPoint + "&zoom=14&size=400x300&sensor=false&key=AIzaSyAiz04dIyeJ5NSgqXEnwr6-ZgG1wtXDkes";
 	    document.getElementById("map").innerHTML = "<img src='" + img_url + "'>";
 	  }
 
