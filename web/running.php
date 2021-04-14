@@ -20,7 +20,7 @@ if (!$_SESSION["username"]) {
 </head>
 
 <body>
-    <?php
+    	<?php
 		include "includes/database.php"; 
 		$durationMindb = '';
 		$burntCaloriesdb = '';
@@ -31,12 +31,12 @@ if (!$_SESSION["username"]) {
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		$durationMin= $_POST["durationMin"];
-		$burntCalories = $durationMin * 9.5;
+		$burntCalories = $durationMin * 11.5;
 		$type="running";
 		$distance = $_POST["distance"];
 		
 	// insert values in the data base and userid 
-		$sql = "INSERT INTO activity(durationmin, caloriesburnt, userid, type, distance) VALUE ($durationMin, $burntCalories, $userid,'$type',$distance) ";
+		$sql = "INSERT INTO activity(durationMin, burntCalories, userid, type, distance) VALUE ($durationMin, $burntCalories, $userid,'$type',$distance) ";
 
 		if (mysqli_query($conn, $sql)) { 
 	        //continue show the rest of html
@@ -53,15 +53,15 @@ if (!$_SESSION["username"]) {
 	        elseif (isset($_GET['id'])) {
 				$id = $_GET['id'];
 				//read from data base
-				$sql = "SELECT durationmin, caloriesburnt FROM activity where id=$id and userid = $userid ";
+				$sql = "SELECT durationMin, burntCalories FROM activity where id=$id and userid = $userid ";
 				$result = $conn->query($sql);
 				//result array
 		        $row = $result->fetch_assoc() ;
 	        	if (!$result) {
 	            die('Could not query:' . mysql_error());
 	        } 
-	        $durationMindb = $row['durationmin'];
-			$burntCaloriesdb = $row['caloriesBurnt'];
+	        $durationMindb = $row['durationMin'];
+			$burntCaloriesdb = $row['burntCalories'];
 		}
 
 
