@@ -75,7 +75,7 @@ if (!$_SESSION["username"]) {
 
     <div class="cycling-container">
         <div id="gpsOutput">GPS</div>
-        <div id="map"></div>
+        <div id="map"><img src="images/2.jpg" width=400 height=300></div>
     </div>
     
     <div class="cycling-button-container">

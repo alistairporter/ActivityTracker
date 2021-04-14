@@ -75,7 +75,7 @@ if (!$_SESSION["username"]) {
 
     <div class="walking-container">
         <div id="gpsOutput">GPS</div>
-        <div id="map"></div>
+        <div id="map"><img src="images/4.jpg" width=400 height=300></div>
     </div>
     
     <div class="walking-button-container">
