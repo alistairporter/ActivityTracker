@@ -31,6 +31,7 @@ if (!$_SESSION["username"]) {
 
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		$durationMin= $_POST["durationMin"];
+		// the burnt calories each minute : Chertoff, J and Bubnis, d. (2019) How many calories can you burn with an hour of Zumba?. Healthline. [Online] [Accessed on 10th April 2021] https://www.healthline.com/health/fitness-exercise/zumba-for-weight-loss#How-many-calories-can-you-burn-with-an-hour-of-Zumba?- 
 		$burntCalories = $durationMin * 9.5;
 		$type="zumba";
 		

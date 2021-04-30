@@ -32,7 +32,7 @@ if (!$_SESSION["username"]) {
 
 			if($_SERVER["REQUEST_METHOD"] == "POST") {
 				$durationMin= $_POST["durationMin"];
-				$burntCalories = $durationMin * 9.5;
+				$burntCalories = $durationMin * 10;
 				$type="cardio";
 
 			

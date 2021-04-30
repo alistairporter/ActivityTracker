@@ -31,6 +31,10 @@ $resultChart = $conn->query($sqlChart);
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
+      
+//        google chart : Google Charts. (2020) Visualization: Column Chart. Google. 
+// [Online] [Accessed on 4th April 2021] https://developers.google.com/chart/interactive/docs/gallery/columnchart
+
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([

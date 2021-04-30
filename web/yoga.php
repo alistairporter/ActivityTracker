@@ -32,8 +32,8 @@ if (!$_SESSION["username"]) {
 
 			if($_SERVER["REQUEST_METHOD"] == "POST") {
 				$durationMin= $_POST["durationMin"];
-				
-				$burntCalories = $durationMin * 9.5;
+				// Burnt Calories in each minute doing yoga : Frothingham, s and Bubnis, d. (2019). How Many Calories Does Yoga Burn and Can It Help You Lose Weight?. Healthline. [Online][Accessed on 9th April 2021] https://luviyoga.com/calories-burn-in-each-yoga-type/  
+				$burntCalories = $durationMin * 4.5;
 				$type = "yoga";
 			
 			// insert values in the data base and userid 
