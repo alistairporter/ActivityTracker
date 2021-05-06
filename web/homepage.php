@@ -201,7 +201,7 @@ $resultChart = $conn->query($sqlChart);
   
 
     <div class="content-box">
-        
+        <img src="images/exercise.jpg" alt="">
     </div>
 </body>
    
